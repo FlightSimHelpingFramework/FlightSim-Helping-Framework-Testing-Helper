@@ -1,0 +1,32 @@
+name: .NET build and publish package
+
+on:
+  push:
+    branches: [ main]
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.100
+    - name: Install dependencies
+      working-directory: FSHF Testing Helper 
+      run: dotnet restore
+    - name: Build
+      working-directory: FSHF Testing Helper 
+      run: dotnet build --configuration Release --no-restore
+    - name: Create the package
+      working-directory: FSHF Testing Helper 
+      run: dotnet pack --configuration Release
+    - name: Publish the package to nuget
+      working-directory: FSHF Testing Helper 
+      run: dotnet nuget push FSHFTestingHelper/bin/Release/*.nupkg --api-key ${{secrets.NUGET}} --source https://api.nuget.org/v3/index.json --skip-duplicate
