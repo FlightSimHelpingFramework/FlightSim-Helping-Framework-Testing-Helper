@@ -43,7 +43,6 @@ namespace FSHFTestingHelper.Downloader
             {
                 string a = request.Url.AbsolutePath;
                 string b = a.Substring(1, a.Length - 1);
-                int i = 9;
                 string s = File.ReadAllText(b);
                 return s;
             }
