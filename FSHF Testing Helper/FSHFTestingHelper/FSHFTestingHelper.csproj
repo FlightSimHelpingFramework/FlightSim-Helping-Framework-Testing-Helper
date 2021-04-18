@@ -3,21 +3,12 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>0.0.4</PackageVersion>
+        <PackageVersion>0.0.5</PackageVersion>
         <Title>FSHFTestingHelper</Title>
         <Authors>FlightSim Helping Framework</Authors>
         <Copyright>2021</Copyright>
         <PackageProjectUrl>https://github.com/FlightSimHelpingFramework/Testing-Helper</PackageProjectUrl>
         <RepositoryUrl>https://github.com/FlightSimHelpingFramework/Testing-Helper.git</RepositoryUrl>
     </PropertyGroup>
-
-    <ItemGroup>
-      <PackageReference Include="FSHFStandardLibrary.Core" Version="0.0.4" />
-      <PackageReference Include="FSHFWeatherInformation.Core" Version="0.0.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Weather" />
-    </ItemGroup>
 
 </Project>
