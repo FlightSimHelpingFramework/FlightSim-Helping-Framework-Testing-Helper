@@ -25,7 +25,7 @@ jobs:
       run: CD
     - name: Create the package
       working-directory: FSHF Testing Helper 
-      run: nuget pack FSHFTestingHelper/FSHFTestingHelper.csproj -Build -Properties Configuration=Release -Verbosity detailed
+      run:  dotnet pack FSHFTestingHelper/FSHFTestingHelper.csproj -c Release
     - name: Check directory
       run: CD
     - name: Publish the package to nuget
