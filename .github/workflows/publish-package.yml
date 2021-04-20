@@ -29,4 +29,4 @@ jobs:
       run: dotnet pack --configuration Release
     - name: Publish the package to nuget
       working-directory: FSHF Testing Helper 
-      run: nuget push FSHFTestingHelper/bin/Release/*.nupkg --api-key ${{secrets.NUGET}} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      run: nuget push FSHFTestingHelper/bin/Release/*.nupkg -ApiKey ${{secrets.NUGET}} -Source https://api.nuget.org/v3/index.json -SkipDuplicate
