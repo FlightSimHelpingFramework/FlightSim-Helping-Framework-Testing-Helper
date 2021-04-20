@@ -20,7 +20,7 @@ jobs:
         dotnet-version: 5.0.100
     - name: Install dependencies
       working-directory: FSHF Testing Helper 
-      run: dotnet restore
+      run: nuget restore FSHF Testing Helper.sln
     - name: Create the package
       working-directory: FSHF Testing Helper 
       run: nuget pack FSHFTestingHelper/FSHFTestingHelper.csproj -Build -Properties Configuration=Release -Verbosity detailed
