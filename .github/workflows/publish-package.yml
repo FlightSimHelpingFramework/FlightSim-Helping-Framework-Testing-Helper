@@ -19,13 +19,13 @@ jobs:
       with:
         dotnet-version: 5.0.100
     - name: Install dependencies
-      working-directory: FSHF Weather Information
+      working-directory: FSHF Testing Helper 
       run: dotnet restore
 
     - name: Build
-      working-directory: FSHF Weather Information
+      working-directory: FSHF Testing Helper 
       run: dotnet build --configuration Release --no-restore
-      
+
     - name: Check directory
       run: CD
     - name: Create the package
