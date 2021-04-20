@@ -2,13 +2,14 @@
 
     <PropertyGroup>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>0.0.6</PackageVersion>
+        <PackageVersion>0.0.7</PackageVersion>
         <Title>FSHFTestingHelper</Title>
         <Authors>FlightSim Helping Framework</Authors>
         <Copyright>2021</Copyright>
         <PackageProjectUrl>https://github.com/FlightSimHelpingFramework/Testing-Helper</PackageProjectUrl>
         <RepositoryUrl>https://github.com/FlightSimHelpingFramework/Testing-Helper.git</RepositoryUrl>
-        <TargetFrameworks>net462;net472;net48;net5.0;netcoreapp3.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+        <TargetFrameworks>net5.0;netcoreapp3.1;netstandard2.1</TargetFrameworks>
+        <Description>FlightSim Helping Framework Testing Helper</Description>
     </PropertyGroup>
 
 </Project>

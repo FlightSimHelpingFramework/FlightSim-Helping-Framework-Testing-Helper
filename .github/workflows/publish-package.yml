@@ -2,7 +2,7 @@ name: .NET build and publish package
 
 on:
   push:
-    branches: [ main]
+    branches: [ main ]
 
 jobs:
   build:
@@ -26,15 +26,13 @@ jobs:
       working-directory: FSHF Testing Helper 
       run: dotnet build --configuration Release --no-restore
 
-    - name: Check directory
-      working-directory: FSHF Testing Helper 
-      run: CD
     - name: Create the package
       working-directory: FSHF Testing Helper 
-      run:  dotnet pack FSHFTestingHelper/FSHFTestingHelper.csproj -c Release -v d
-    - name: Check directory
-      working-directory: FSHF Testing Helper/FSHFTestingHelper/bin/Release
-      run: ls
+      run:  dotnet pack -c Release -v d --no-build
+
     - name: Publish the package to nuget
       working-directory: FSHF Testing Helper/FSHFTestingHelper/bin/Release
-      run: nuget push *.nupkg -ApiKey ${{secrets.NUGET}} -Source https://api.nuget.org/v3/index.json -SkipDuplicate -Verbosity detailed
+      run: > 
+        dotnet nuget push *.nupkg -ApiKey ${{secrets.NUGET}} 
+        -Source https://api.nuget.org/v3/index.json 
+        -SkipDuplicate -Verbosity detailed
