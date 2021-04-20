@@ -34,4 +34,4 @@ jobs:
     - name: Check directory
       run: CD
     - name: Publish the package to nuget
-      run: nuget push ../../FSHFTestingHelper/bin/Release/*.nupkg -ApiKey ${{secrets.NUGET}} -Source https://api.nuget.org/v3/index.json -SkipDuplicate -Verbosity detailed
+      run: nuget push FSHFTestingHelper/bin/Release/*.nupkg -ApiKey ${{secrets.NUGET}} -Source https://api.nuget.org/v3/index.json -SkipDuplicate -Verbosity detailed
