@@ -34,7 +34,7 @@ jobs:
       run:  dotnet pack FSHFTestingHelper/FSHFTestingHelper.csproj -c Release -v d
     - name: Check directory
       working-directory: FSHF Testing Helper/FSHFTestingHelper/bin/Release
-      run: ls FSHFTestingHelper/bin/Release
+      run: ls
     - name: Publish the package to nuget
       working-directory: FSHF Testing Helper/FSHFTestingHelper/bin/Release
       run: nuget push *.nupkg -ApiKey ${{secrets.NUGET}} -Source https://api.nuget.org/v3/index.json -SkipDuplicate -Verbosity detailed
