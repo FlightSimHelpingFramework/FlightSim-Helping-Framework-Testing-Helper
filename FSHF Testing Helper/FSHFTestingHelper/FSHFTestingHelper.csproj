@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>0.0.5</PackageVersion>
+        <PackageVersion>0.0.6</PackageVersion>
         <Title>FSHFTestingHelper</Title>
         <Authors>FlightSim Helping Framework</Authors>
         <Copyright>2021</Copyright>
         <PackageProjectUrl>https://github.com/FlightSimHelpingFramework/Testing-Helper</PackageProjectUrl>
         <RepositoryUrl>https://github.com/FlightSimHelpingFramework/Testing-Helper.git</RepositoryUrl>
+        <TargetFrameworks>net462;net472;net48;net5.0;netcoreapp3.1;netstandard2.0;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
 </Project>
